@@ -7,6 +7,9 @@ Student::Student(std::string firstName,std::string lastName,Subject* subjects,in
     std::copy(subjects,subjects+n,_subjects);
     _nSubjects=n;
 }
+Student::~Student(){
+    delete[] _subjects;
+}
 
 void Student::printName(){
     std::cout<<_firstName<<" "<<_lastName;

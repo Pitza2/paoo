@@ -18,4 +18,5 @@ class Student{
         void addSubject(Subject);
         void printSubjects();
         Student& operator=(const Student&);
+        ~Student();
 };
