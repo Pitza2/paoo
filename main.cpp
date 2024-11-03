@@ -14,5 +14,10 @@ int main(){
     Subject subjects[]={{"mat1",5},{"mat2",6},{"mat3",7}};
     Student b("ion","ionel",subjects,3);
     b.printSubjects();
+    Subject subjects2[]={{"mat5",7},{"mat6",8},{"mat7",9}};
+    
+    Student c("ion","Mihai",subjects2,3);
+    b=c;
+    b.printSubjects();
     return 0;
 }

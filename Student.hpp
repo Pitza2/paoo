@@ -8,7 +8,7 @@ class Student{
     private:
         std::string _firstName;
         std::string _lastName;
-        Subject* _subjects;
+        Subject* _subjects=nullptr;
         int _nSubjects=0;
 
     public:
@@ -17,4 +17,5 @@ class Student{
         void printName();
         void addSubject(Subject);
         void printSubjects();
+        Student& operator=(const Student&);
 };
