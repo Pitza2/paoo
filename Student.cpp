@@ -11,6 +11,17 @@ Student::~Student(){
     delete[] _subjects;
 }
 
+Student::Student(const Student& s) : _firstName(s._firstName), _lastName(s._firstName), _nSubjects(s._nSubjects){
+    _subjects=new Subject[s._nSubjects];
+    std::copy(s._subjects,s._subjects+s._nSubjects,_subjects);
+    std::cout<<"copied Student\n";
+}
+
+Student::Student(Student&& s) : _firstName(s._firstName), _lastName(s._firstName), _nSubjects(s._nSubjects), _subjects(s._subjects){
+    s._subjects=nullptr;
+    std::cout << "Move constructor called\n";
+}
+
 void Student::printName(){
     std::cout<<_firstName<<" "<<_lastName;
 }

@@ -12,8 +12,11 @@ class Student{
         int _nSubjects=0;
 
     public:
+        Student() = delete;
         Student(std::string,std::string);
         Student(std::string,std::string,Subject*, int);
+        Student(const Student&);
+        Student(Student&&);
         void printName();
         void addSubject(Subject);
         void printSubjects();
