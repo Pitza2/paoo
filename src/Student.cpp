@@ -26,6 +26,21 @@ void Student::printName(){
     std::cout<<_firstName<<" "<<_lastName;
 }
 
+double Student::grade(){
+    double sum=0;
+    for(int i=0;i<_nSubjects;i++){
+        sum+=_subjects[i].averageGrade;
+    }
+    return sum / _nSubjects;
+}
+
+bool Student::hasFailedSubjects(){
+     for(int i=0;i<_nSubjects;i++){
+        if(_subjects[i].averageGrade<5)
+        return true;
+    }
+    return false;
+}
 void Student::addSubject(Subject s){
     Subject* newSubjectArray=new Subject[_nSubjects+1];
     std::copy(_subjects,_subjects+_nSubjects,newSubjectArray);

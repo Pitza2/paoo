@@ -3,6 +3,9 @@
 #include <algorithm>
 #include <iostream>
 #include"Student.hpp"
+#include<vector>
+#include "ComputerSpec.hpp"
+// #include "ComputerSpec.hpp"
 int main(){
     std::string arr[]={"dasdsa","dasdasd","fasdas"};
     std::string* arr2= new std::string[3];
@@ -19,5 +22,13 @@ int main(){
     Student c("ion","Mihai",subjects2,3);
     b=c;
     b.printSubjects();
+
+    std::cout<<"////////////////////////////////////////////\n";
+    ComputerSpec cs;
+    cs.enrollStudent("ion1","ionel1",7);
+    cs.enrollStudent("ion2","ionel2",7);
+    cs.enrollStudent("ion3","ionel3",7);
+    cs.enrollStudent("ion4","ionel4",7);
+    cs.printStudents();
     return 0;
 }
