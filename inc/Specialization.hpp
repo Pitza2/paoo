@@ -10,4 +10,5 @@ class Specialization{
     virtual void enrollStudent(std::string, std::string, int)=0;
     virtual void endYear()=0;
     virtual void printStudents()=0;
+    virtual void changeGrade(int,int,double)=0;
 };

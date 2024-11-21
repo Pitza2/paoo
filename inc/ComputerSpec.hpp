@@ -5,4 +5,5 @@ class ComputerSpec : public Specialization{
     void enrollStudent(std::string, std::string,int);
     void endYear();
     void printStudents();
+    void changeGrade(int, int,double);
 };

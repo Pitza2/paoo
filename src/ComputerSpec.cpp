@@ -9,8 +9,8 @@ ComputerSpec::ComputerSpec(){
 }
 
 void ComputerSpec::enrollStudent(std::string firstName,std::string lastName, int highSchoolGrade){
-    if(highSchoolGrade < 8){
-        std::cout<<"failed to enroll student, his grade is too low";
+    if(highSchoolGrade < 7){
+        std::cout<<"failed to enroll student, his grade is too low\n";
         return;
     }
     _studentList.push_back(Student(firstName,lastName,_subjectList.data(),_subjectList.size())); 
@@ -27,4 +27,7 @@ void ComputerSpec::printStudents(){
     for(;it!=_studentList.end();it++){
         it->printName();
     }
+}
+void ComputerSpec::changeGrade(int studentId, int subjectId,double grade){
+    _studentList[studentId].changeSubjectGrade(subjectId,grade);
 }

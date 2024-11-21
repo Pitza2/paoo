@@ -8,6 +8,7 @@ Student::Student(std::string firstName,std::string lastName,Subject* subjects,in
     _nSubjects=n;
 }
 Student::~Student(){
+    std::cout<<"destructor called for student\n";
     delete[] _subjects;
 }
 
@@ -23,7 +24,7 @@ Student::Student(Student&& s) : _firstName(s._firstName), _lastName(s._firstName
 }
 
 void Student::printName(){
-    std::cout<<_firstName<<" "<<_lastName;
+    std::cout<<_firstName<<" "<<_lastName<<"\n";
 }
 
 double Student::grade(){
@@ -64,4 +65,7 @@ Student& Student::operator=(const Student& s){
         std::copy(s._subjects,s._subjects+s._nSubjects,_subjects);
     }
     return *this;
+}
+void Student::changeSubjectGrade(int subjectId,double grade){
+    _subjects[subjectId].averageGrade=grade;
 }

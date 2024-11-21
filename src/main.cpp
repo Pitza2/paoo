@@ -26,9 +26,18 @@ int main(){
     std::cout<<"////////////////////////////////////////////\n";
     ComputerSpec cs;
     cs.enrollStudent("ion1","ionel1",7);
+    std::cout<<"stud1 ^\n";
     cs.enrollStudent("ion2","ionel2",7);
+    std::cout<<"stud2 ^ \n";
     cs.enrollStudent("ion3","ionel3",7);
+    std::cout<<"stud 3 ^\n";
     cs.enrollStudent("ion4","ionel4",7);
+    cs.printStudents();
+    std::cout<<"stud 4 + print ^\n";
+    cs.changeGrade(0,0,4);
+    std::cout<<"change grade ^ \n";
+    cs.endYear();
+    std::cout<<"end year ^ \n";
     cs.printStudents();
     return 0;
 }

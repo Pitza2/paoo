@@ -24,6 +24,7 @@ class Student{
         void printName();
         void addSubject(Subject);
         void printSubjects();
+        void changeSubjectGrade(int, double);
         Student& operator=(const Student&);
         ~Student();
 };
